@@ -1,0 +1,271 @@
+[
+  {
+    "type": "container",
+    "key": "backLayer",
+    "name": "Back Layer",
+    "target": "world",
+    "children": [
+      {
+        "type": "background",
+        "sprite": "background_preload"
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "key": "uiLayer",
+    "name": "UI Layer",
+    "target": "stage",
+    "children": [
+      {
+        "type": "sprite",
+        "key": "finishBadge",
+        "atlas": "main",
+        "frame": "win.png",
+        "anchor": 0.5,
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 792,
+            "h": 313,
+            "factor": 0.75
+          },
+          "offset": {
+            "landscape": {
+              "center-x": 400,
+              "center-y": -50
+            },
+            "portrait": {
+              "left": "center",
+              "top": "center"
+            }
+          }
+        }
+      },
+      {
+        "type": "sprite",
+        "key": "logo",
+        "sprite": "logo",
+        "anchor": [0.5, 0],
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 522,
+            "h": 316
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -280,
+              "center-y": -290
+            },
+            "portrait": {
+              "left": "center",
+              "top": 50
+            }
+          }
+        }
+      },
+      {
+        "type": "container",
+        "key": "cta",
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 459,
+            "h": 170
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -280,
+              "center-y": 230
+            },
+            "portrait": {
+              "left": "center",
+              "top": 1300
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "sprite",
+            "atlas": "main",
+            "frame": "cta.png",
+            "anchor": 0.5,
+            "interactive": true,
+            "events": [
+              {
+                "type": "onInputDown",
+                "name": "ctaClick"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "constant": "play",
+            "anchor": [0.5, 1],
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 48,
+              "fill": "#ffead2",
+              "stroke": "#003f00",
+              "strokeThickness": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "key": "field",
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 501,
+            "h": 461,
+            "factor": 1.2
+          },
+          "offset": {
+            "landscape": {
+              "left": 750,
+              "center-y": -230.5
+            },
+            "portrait": {
+              "center-x": -250.5,
+              "top": 540
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "sprite",
+            "key": "fieldBack",
+            "atlas": "main",
+            "frame": "game_field.png"
+          },
+          {
+            "type": "container",
+            "key": "cells",
+            "position": {
+              "x": 46,
+              "y": 27
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "key": "drag",
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 700,
+            "h": 200
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -630,
+              "center-y": -50
+            },
+            "portrait": {
+              "center-x": -350,
+              "top": 350
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "graphics",
+            "key": "drag",
+            "draw": {
+              "shape": "rect",
+              "fillAlpha": 0,
+              "w": 700,
+              "h": 200
+            }
+          },
+          {
+            "type": "text",
+            "constant": "snake.drag",
+            "anchor": 0.5,
+            "position": {
+              "x": 350,
+              "y": 100
+            },
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 40,
+              "fill": "#ffffff",
+              "align": "center"
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "key": "winFail",
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 500,
+            "h": 200
+          },
+          "offset": {
+            "landscape": {
+              "center-x": 70,
+              "center-y": 50
+            },
+            "portrait": {
+              "center-x": -250,
+              "bottom": 600
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "graphics",
+            "key": "winFail",
+            "draw": {
+              "shape": "rect",
+              "fillAlpha": 0,
+              "w": 500,
+              "h": 200
+            }
+          },
+          {
+            "type": "text",
+            "key": "winFail",
+            "text": "xxx",
+            "anchor": 0.5,
+            "position": {
+              "x": 250,
+              "y": 100
+            },
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 52,
+              "fill": "#ffffff",
+              "align": "center"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "key": "gameLayer",
+    "name": "Game Layer",
+    "target": "world",
+    "children": []
+  },
+  {
+    "type": "camera",
+    "portrait": {
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    "landscape": {
+      "offsetX": 0,
+      "offsetY": 0
+    }
+  }
+]

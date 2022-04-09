@@ -1,0 +1,287 @@
+[
+  {
+    "type": "container",
+    "key": "backLayer",
+    "name": "Back Layer",
+    "target": "world",
+    "children": [
+      {
+        "type": "background",
+        "sprite": "background_preload"
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "key": "uiLayer",
+    "name": "UI Layer",
+    "target": "stage",
+    "children": [
+      {
+        "type": "container",
+        "key": "swipe",
+        "data": {
+          "dimensions": {
+            "w": 800,
+            "h": 300
+          },
+          "offset": {
+            "landscape": {
+              "center-x": 0,
+              "top": 50
+            },
+            "portrait": {
+              "center-x": -400,
+              "top": 300
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "graphics",
+            "key": "swipe",
+            "draw": {
+              "shape": "rect",
+              "fillAlpha": 0,
+              "w": 800,
+              "h": 300
+            }
+          },
+          {
+            "type": "text",
+            "constant": "snake.swipe",
+            "anchor": 0.5,
+            "position": {
+              "x": 400,
+              "y": 150
+            },
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 42,
+              "fill": "#ffffff",
+              "align": "center"
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "key": "match",
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 1000,
+            "h": 300
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -100,
+              "bottom": 350
+            },
+            "portrait": {
+              "center-x": -500,
+              "bottom": 550
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "graphics",
+            "key": "match",
+            "draw": {
+              "shape": "rect",
+              "fillAlpha": 0,
+              "w": 1000,
+              "h": 300
+            }
+          },
+          {
+            "type": "text",
+            "constant": "snake.match",
+            "anchor": 0.5,
+            "position": {
+              "x": 500,
+              "y": 150
+            },
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 36,
+              "fill": "#ffffff",
+              "align": "center"
+            }
+          }
+        ]
+      },
+      {
+        "type": "sprite",
+        "key": "logo",
+        "sprite": "logo",
+        "anchor": [0.5, 0],
+        "data": {
+          "dimensions": {
+            "w": 522,
+            "h": 316
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -380,
+              "center-y": -260
+            },
+            "portrait": {
+              "left": "center",
+              "top": 50
+            }
+          }
+        }
+      },
+      {
+        "type": "container",
+        "key": "cta",
+        "data": {
+          "dimensions": {
+            "w": 459,
+            "h": 170
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -380,
+              "center-y": 200
+            },
+            "portrait": {
+              "left": "center",
+              "top": 1300
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "sprite",
+            "atlas": "main",
+            "frame": "cta.png",
+            "anchor": 0.5,
+            "interactive": true,
+            "events": [
+              {
+                "type": "onInputDown",
+                "name": "ctaClick"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "constant": "play",
+            "anchor": [0.5, 1],
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 48,
+              "fill": "#ffead2",
+              "stroke": "#003f00",
+              "strokeThickness": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "key": "gameLayer",
+    "name": "Game Layer",
+    "target": "world",
+    "children": [
+      {
+        "type": "sprite",
+        "key": "field",
+        "atlas": "main",
+        "frame": "tutorial_field.png",
+        "anchor": 0.5,
+        "position": {
+          "x": 683,
+          "y": 683
+        }
+      },
+      {
+        "type": "sprite",
+        "key": "snake",
+        "atlas": "snake_animation",
+        "frame": "snake-0.png",
+        "anchor": 0.5,
+        "position": {
+          "x": 683,
+          "y": 669
+        }
+      },
+      {
+        "type": "text",
+        "key": "col1",
+        "position": {
+          "x": 638,
+          "y": 583
+        },
+        "text": "2",
+        "anchor": 0.5,
+        "style": {
+          "font": "PT Serif Bold",
+          "fontSize": 20,
+          "fill": "#ffffff"
+        }
+      },
+      {
+        "type": "text",
+        "key": "col2",
+        "position": {
+          "x": 718,
+          "y": 583
+        },
+        "text": "1",
+        "anchor": 0.5,
+        "style": {
+          "font": "PT Serif Bold",
+          "fontSize": 20,
+          "fill": "#ffffff"
+        }
+      },
+      {
+        "type": "text",
+        "key": "row1",
+        "position": {
+          "x": 583,
+          "y": 638
+        },
+        "text": "1",
+        "anchor": 0.5,
+        "style": {
+          "font": "PT Serif Bold",
+          "fontSize": 20,
+          "fill": "#ffffff"
+        }
+      },
+      {
+        "type": "text",
+        "key": "row2",
+        "position": {
+          "x": 583,
+          "y": 718
+        },
+        "text": "2",
+        "anchor": 0.5,
+        "style": {
+          "font": "PT Serif Bold",
+          "fontSize": 20,
+          "fill": "#ffffff"
+        }
+      }
+    ]
+  },
+  {
+    "type": "camera",
+    "portrait": {
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    "landscape": {
+      "offsetX": 0,
+      "offsetY": 0
+    }
+  }
+]

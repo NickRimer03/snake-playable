@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'PT Serif Bold';
+    src: local('PT Serif Bold'), local('PT-Serif-Bold'),
+    url('~Assets/fonts/pt-serif-latin-700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+}

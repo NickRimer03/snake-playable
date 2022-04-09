@@ -1,0 +1,13 @@
+{
+  "loading": "LOADING...",
+  "play": "PLAY NOW!",
+  "snake": {
+    "drag": "Drag the head!\nPress cross to cut the snake!",
+    "swipe": "Swipe the snake\nto the lower right corner",
+    "match": "The number of cells\nfilled with the snake\nin each row and column\nof the field must match\nthe numbers on the sides\nof the field"
+  },
+  "state": {
+    "win": "WIN!",
+    "fail": "FAIL!"
+  }
+}
